@@ -9,9 +9,9 @@ const CONFIG = {
 const PORT = 8080;
 const client = new line.Client(CONFIG)
 
-express()
-  .post("/webhook", line.middleware(CONFIG), (req, res) => handleBot(req, res))
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+// express()
+//   .post("/webhook", line.middleware(CONFIG), (req, res) => handleBot(req, res))
+//   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 function handleBot(req, res) {
   res.status(200).end();
@@ -20,3 +20,5 @@ function handleBot(req, res) {
 		client.replyMessage(event.replyToken,{type:'text',text:'こんにちは'})
   });
 }
+
+handleBot();
