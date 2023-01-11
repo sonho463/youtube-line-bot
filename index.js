@@ -17,6 +17,6 @@ function handleBot(req, res) {
   res.status(200).end();
   req.body.events.map((event) => {
 		console.log('event', event)
-		client.replyMessage(event.replyToken,{type:'text',text:'こんにちは'})
+		// client.replyMessage(event.replyToken,{type:'text',text:'こんにちは'})
   });
 }
